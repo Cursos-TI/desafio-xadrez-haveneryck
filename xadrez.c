@@ -42,29 +42,22 @@ int main() {
     printf("\nMovimentação da Rainha:\n");
     moverRainha(MOV_RAINHA);
 
-    // Movimentação do Cavalo: L para cima e direita
+    // Movimentação do Cavalo: L para baixo e esquerda
     printf("\nMovimentação do Cavalo:\n");
 
-    for (int i = 0; i < 3; i++) { // simula tentativas de movimento
-        for (int j = 0; j < 3; j++) {
-            if (i == j) {
-                continue; // evita movimentos diagonais
-            }
+    // Loop externo (for) para movimento vertical: duas casas para baixo
+    for (int i = 0; i < MOV_CAVALO_VERTICAL; i++) {
+        printf("Baixo\n");
 
-            if (i + j > 3) {
-                break; // evita movimentos fora do padrão
-            }
-
-            // Movimento em L: 2 para cima, 1 para direita
-            for (int k = 0; k < i; k++) {
-                printf("Cima\n");
-            }
-            for (int l = 0; l < j; l++) {
-                printf("Direita\n");
-            }
-
-            printf("---\n"); // separador visual
+        // Loop interno (while) para movimento horizontal: uma casa para esquerda
+        int j = 0;
+        while (j < MOV_CAVALO_HORIZONTAL) {
+            printf("Esquerda\n");
+            j++;
         }
+
+        printf("---\n"); // Separador visual entre movimentos em L
     }
 
     return 0;
+}
