@@ -25,11 +25,9 @@ void moverRainha(int passos) {
 void moverBispo(int passos) {
     if (passos == 0) return;
 
-    // Loop externo: movimento vertical (Cima)
     for (int i = 0; i < 1; i++) {
         printf("Cima\n");
 
-        // Loop interno: movimento horizontal (Direita)
         for (int j = 0; j < 1; j++) {
             printf("Direita\n");
         }
@@ -51,7 +49,30 @@ int main() {
     printf("\nMovimentação da Rainha:\n");
     moverRainha(MOV_RAINHA);
 
-    // Cavalo será aprimorado no próximo commit
+    // Movimentação do Cavalo: L para cima e direita
+    printf("\nMovimentação do Cavalo:\n");
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (i == j) {
+                continue; // evita movimentos diagonais
+            }
+
+            if (i + j > 3) {
+                break; // evita movimentos fora do padrão
+            }
+
+            // Movimento em L: 2 para cima, 1 para direita
+            for (int k = 0; k < i; k++) {
+                printf("Cima\n");
+            }
+            for (int l = 0; l < j; l++) {
+                printf("Direita\n");
+            }
+
+            printf("---\n"); // separador visual
+        }
+    }
 
     return 0;
 }
