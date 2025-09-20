@@ -6,7 +6,7 @@
 #define MOV_RAINHA 8
 
 int main() {
-    // Movimentação do Bispo: Diagonal superior direita (Cima + Direita)
+    // Movimentação do Bispo: Para diagonal superior direita (Cima + Direita)
     printf("Movimentação do Bispo:\n");
     for (int i = 0; i < MOV_BISPO; i++) {
         printf("Cima\n");
