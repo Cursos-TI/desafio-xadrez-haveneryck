@@ -1,3 +1,44 @@
+# ♟️ Desafio Universidade Estacio de sá — Desafio de Xadrez em C
+
+Este projeto foi desenvolvido como parte de um desafio técnico para simular os movimentos das peças de xadrez utilizando **linguagem C**, com foco em **estruturas de repetição**, **funções recursivas** e **loops complexos**. Cada nível do desafio propõe uma evolução na lógica e na organização do código, culminando em uma simulação avançada e bem documentada.
+
+---
+
+## 🧠 Níveis do Desafio
+
+### 🏅 Nível Novato
+- Movimentação básica das peças:
+  - **Bispo**: 5 casas na diagonal superior direita (Cima + Direita)
+  - **Torre**: 5 casas para a direita
+  - **Rainha**: 8 casas para a esquerda
+- Utilização de `for`, `while` e `do-while`
+- Saída clara com `printf("Direção\n")`
+
+### 🏅 Nível Aventureiro
+- Implementação da movimentação do **Cavalo** em "L":
+  - 2 casas para baixo + 1 casa para esquerda
+- Uso obrigatório de **loops aninhados** (`for` + `while`)
+- Separação visual entre movimentos
+
+### 🥇 Nível Mestre
+- Refatoração das peças simples com **funções recursivas**
+- **Bispo** com recursividade + loops aninhados
+- **Cavalo** com múltiplas variáveis, `continue` e `break`
+  - Movimento em "L": 2 casas para cima + 1 casa para direita
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- Linguagem **C**
+- Compilador GCC
+- Terminal Git Bash
+- Git e GitHub para versionamento
+
+
+ABAIXO AS INSTRUÇOES PARA O PROJETO!
+
+
 # ⚠️ Importante!!!
 Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
 
