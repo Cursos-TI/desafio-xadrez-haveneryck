@@ -7,14 +7,6 @@
 #define MOV_CAVALO_VERTICAL 2
 #define MOV_CAVALO_HORIZONTAL 1
 
-// Função recursiva para movimentar o Bispo
-void moverBispo(int passos) {
-    if (passos == 0) return;
-    printf("Cima\n");
-    printf("Direita\n");
-    moverBispo(passos - 1);
-}
-
 // Função recursiva para movimentar a Torre
 void moverTorre(int passos) {
     if (passos == 0) return;
@@ -29,8 +21,25 @@ void moverRainha(int passos) {
     moverRainha(passos - 1);
 }
 
+// Função recursiva + loops aninhados para movimentar o Bispo
+void moverBispo(int passos) {
+    if (passos == 0) return;
+
+    // Loop externo: movimento vertical (Cima)
+    for (int i = 0; i < 1; i++) {
+        printf("Cima\n");
+
+        // Loop interno: movimento horizontal (Direita)
+        for (int j = 0; j < 1; j++) {
+            printf("Direita\n");
+        }
+    }
+
+    moverBispo(passos - 1);
+}
+
 int main() {
-    // Movimentação do Bispo com recursão
+    // Movimentação do Bispo com recursão + loops aninhados
     printf("Movimentação do Bispo:\n");
     moverBispo(MOV_BISPO);
 
@@ -42,22 +51,7 @@ int main() {
     printf("\nMovimentação da Rainha:\n");
     moverRainha(MOV_RAINHA);
 
-    // Movimentação do Cavalo: L para baixo e esquerda
-    printf("\nMovimentação do Cavalo:\n");
-
-    // Loop externo (for) para movimento vertical: duas casas para baixo
-    for (int i = 0; i < MOV_CAVALO_VERTICAL; i++) {
-        printf("Baixo\n");
-
-        // Loop interno (while) para movimento horizontal: uma casa para esquerda
-        int j = 0;
-        while (j < MOV_CAVALO_HORIZONTAL) {
-            printf("Esquerda\n");
-            j++;
-        }
-
-        printf("---\n"); // Separador visual entre movimentos em L
-    }
+    // Cavalo será aprimorado no próximo commit
 
     return 0;
 }
