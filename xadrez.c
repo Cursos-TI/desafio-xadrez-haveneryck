@@ -4,9 +4,11 @@
 #define MOV_BISPO 5
 #define MOV_TORRE 5
 #define MOV_RAINHA 8
+#define MOV_CAVALO_VERTICAL 2
+#define MOV_CAVALO_HORIZONTAL 1
 
 int main() {
-    // Movimentação do Bispo: Para diagonal superior direita (Cima + Direita)
+    // Movimentação do Bispo: Diagonal superior direita (Cima + Direita)
     printf("Movimentação do Bispo:\n");
     for (int i = 0; i < MOV_BISPO; i++) {
         printf("Cima\n");
@@ -28,6 +30,20 @@ int main() {
         printf("Esquerda\n");
         k++;
     } while (k < MOV_RAINHA);
+
+    // Movimentação do Cavalo: L para baixo e esquerda (loops aninhados)
+    printf("\nMovimentação do Cavalo:\n");
+    for (int l = 0; l < MOV_CAVALO_VERTICAL; l++) {
+        printf("Baixo\n");
+
+        int m = 0;
+        while (m < MOV_CAVALO_HORIZONTAL) {
+            printf("Esquerda\n");
+            m++;
+        }
+
+        printf("---\n"); // Separador visual entre movimentos em L
+    }
 
     return 0;
 }
